@@ -1,4 +1,4 @@
-package echo
+package response
 
 import (
 	"github.com/bossncn/go-common/http/model"
