@@ -2,14 +2,14 @@ package error_code
 
 const UnknownError string = "ERR00000"
 const InternalServerError string = "ERR00001"
-const ValidationError string = "ERR00002"
+const InvalidRequest string = "ERR00002"
 const Unauthorized string = "ERR00003"
 const Forbidden string = "ERR00004"
 const NotFound string = "ERR00005"
 
 func GetHTTPStatusCode(code string) int {
 	switch code {
-	case ValidationError:
+	case InvalidRequest:
 		return 400
 	case Unauthorized:
 
@@ -28,8 +28,8 @@ func GetHTTPStatusCode(code string) int {
 
 func GetErrorCode(code string) string {
 	switch code {
-	case ValidationError:
-		return ValidationError
+	case InvalidRequest:
+		return InvalidRequest
 	case Unauthorized:
 		return Unauthorized
 	case Forbidden:
@@ -43,8 +43,8 @@ func GetErrorCode(code string) string {
 
 func GetErrorMessage(code string) string {
 	switch code {
-	case ValidationError:
-		return "ValidationError"
+	case InvalidRequest:
+		return "InvalidRequest"
 	case Unauthorized:
 
 		return "Unauthorized"
